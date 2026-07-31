@@ -369,4 +369,14 @@ document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.datase
     useProvidedMap();
   })();
 </script>
+<script>
+  // GitHub에 최상단 "캡처.PNG"로 올린 지도 파일도 대체 이미지로 지원합니다.
+  document.addEventListener('error', event => {
+    const image = event.target;
+    if (image.matches?.('.provided-map') && !image.dataset.rootMapFallback) {
+      image.dataset.rootMapFallback = 'true';
+      image.src = encodeURI('캡처.PNG');
+    }
+  }, true);
+</script>
 </body></html>
