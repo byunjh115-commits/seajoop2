@@ -250,4 +250,123 @@ document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.datase
     addCameraButton();
   })();
 </script>
+<style>
+  /* 도감 캐릭터는 원본 비율을 유지하고 카드 안에서 잘리지 않게 표시합니다. */
+  .entry img{object-fit:contain!important;padding:6px;max-width:100%;max-height:88px;vertical-align:middle}
+</style>
+<script>
+  // GitHub 저장소 최상단의 creatures/ 폴더도 이미지 경로로 지원합니다.
+  (() => {
+    const alternatePath = value => value.replace('assets/creatures/', 'creatures/');
+    document.addEventListener('error', event => {
+      const image = event.target;
+      if (image.tagName === 'IMG' && image.src.includes('/assets/creatures/')) {
+        image.src = alternatePath(image.getAttribute('src'));
+      }
+    }, true);
+    const replaceBackgroundPath = () => {
+      document.querySelectorAll('[style*="assets/creatures/"]').forEach(element => {
+        if (!element.dataset.rootCreaturePath) {
+          element.style.backgroundImage = alternatePath(element.style.backgroundImage);
+          element.dataset.rootCreaturePath = 'true';
+        }
+      });
+    };
+    // 로컬 파일에서는 assets/ 경로가 정확하므로 바꾸지 않습니다.
+    if (location.protocol !== 'file:') {
+      new MutationObserver(replaceBackgroundPath).observe(document.body, {childList:true, subtree:true});
+      replaceBackgroundPath();
+    }
+  })();
+</script>
+<script>
+  // 기념품 바코드 교환권에 시연용 기념품샵 위치 지도를 추가합니다.
+  (() => {
+    const addMapButton = () => {
+      const voucher = document.querySelector('#barcodeVoucher .voucher-card');
+      if (voucher && !document.querySelector('#openShopMap')) {
+        voucher.insertAdjacentHTML('beforeend', '<button id="openShopMap" class="shop-map-button">🗺️ 기념품샵 교환 위치 보기</button>');
+      }
+    };
+    new MutationObserver(addMapButton).observe(document.body, {childList:true, subtree:true});
+    document.addEventListener('click', event => {
+      if (event.target.closest('#openShopMap')) {
+        document.body.insertAdjacentHTML('beforeend', `<div id="shopMapLayer" class="map-layer"><section class="map-card"><button id="closeShopMap" class="map-close">×</button><h2>🗺️ 기념품 교환 위치</h2><p class="notice">시연용 안내 지도입니다. 실제 운영 시 매장 주소와 운영 시간을 연결해 주세요.</p><div class="busan-map"><div class="coast">부산 바다</div><button class="map-pin gwangan">📍<span>광안리<br>기념품샵</span></button><button class="map-pin haeundae">📍<span>해운대<br>기념품샵</span></button><button class="map-pin dadaepo">📍<span>다대포<br>기념품샵</span></button><button class="map-pin station">📍<span>부산역<br>기념품샵</span></button></div><div class="map-list"><p>📍 광안리 기념품샵</p><p>📍 해운대 기념품샵</p><p>📍 다대포 기념품샵</p><p>📍 부산역 기념품샵</p></div></section></div>`);
+      }
+      if (event.target.closest('#closeShopMap')) document.querySelector('#shopMapLayer')?.remove();
+    });
+    document.head.insertAdjacentHTML('beforeend', `<style>.shop-map-button{margin-top:9px!important;background:#e8f6f4!important;color:#137269!important;border:1px solid #82d5c8!important}.map-layer{position:fixed;inset:0;z-index:1001;padding:16px;display:grid;place-items:center;background:#002b4588}.map-card{position:relative;width:min(100%,420px);max-height:90vh;overflow:auto;padding:23px;border-radius:24px;background:#fff}.map-card h2{margin:0 0 7px;color:#17394d}.map-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:#edf4f4;color:#234b5b;font-size:24px}.busan-map{position:relative;height:275px;margin:15px 0;border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#d5f0dc 0 45%,#a6ddc0 45% 55%,#8fcae2 55%);border:2px solid #d3e9e2}.busan-map:before{content:'';position:absolute;inset:22px 32px 44px 20px;border:3px solid #f7fcf4;border-radius:45% 35% 44% 32%;transform:rotate(-8deg);opacity:.85}.coast{position:absolute;right:16px;bottom:18px;color:#1678a5;font-weight:800;transform:rotate(-13deg)}.map-pin{position:absolute;z-index:2;background:transparent;color:#e94748;font-size:23px;line-height:.8;text-align:center}.map-pin span{display:block;margin-top:4px;padding:4px 6px;border-radius:8px;background:#fff;color:#254d5d;font-size:11px;line-height:1.25;box-shadow:0 2px 5px #214d5333}.gwangan{right:85px;top:112px}.haeundae{right:23px;top:42px}.dadaepo{left:28px;bottom:43px}.station{left:145px;top:67px}.map-list{display:grid;grid-template-columns:1fr 1fr;gap:7px}.map-list p{margin:0;padding:9px;border-radius:10px;background:#effaf7;color:#245263;font-size:12px}</style>`);
+    addMapButton();
+  })();
+</script>
+<script>
+  // 교환 위치 지도는 바코드 교환권이 아니라 포인트 상점에서 엽니다.
+  (() => {
+    const mapTrigger = document.createElement('button');
+    mapTrigger.id = 'openShopMap';
+    mapTrigger.hidden = true;
+    document.body.append(mapTrigger);
+    const addShopMapButton = () => {
+      const grid = document.querySelector('.screen.on .shop-grid');
+      if (grid && !document.querySelector('#openShopMapFromShop')) {
+        grid.insertAdjacentHTML('beforebegin', '<button id="openShopMapFromShop" class="secondary shop-map-button">🗺️ 기념품샵 교환 위치 보기</button>');
+      }
+      document.querySelectorAll('#barcodeVoucher .shop-map-button').forEach(button => button.remove());
+    };
+    new MutationObserver(addShopMapButton).observe(document.body, {childList:true, subtree:true});
+    document.addEventListener('click', event => {
+      if (event.target.closest('#openShopMapFromShop')) document.querySelector('#openShopMap')?.click();
+    });
+    addShopMapButton();
+  })();
+</script>
+<script>
+  // 기념품 교환 지점: 송정·해운대·광안리·다대포
+  (() => {
+    const updateShopPins = () => {
+      const map = document.querySelector('#shopMapLayer');
+      if (!map || map.dataset.locationsUpdated) return;
+      const songjeong = map.querySelector('.station');
+      if (songjeong) {
+        songjeong.querySelector('span').innerHTML = '송정<br>기념품샵';
+        songjeong.style.left = 'auto';
+        songjeong.style.right = '8px';
+        songjeong.style.top = '8px';
+      }
+      const haeundae = map.querySelector('.haeundae');
+      if (haeundae) haeundae.style.top = '104px';
+      const places = map.querySelectorAll('.map-list p');
+      if (places[3]) places[3].textContent = '📍 송정 기념품샵';
+      map.dataset.locationsUpdated = 'true';
+    };
+    new MutationObserver(updateShopPins).observe(document.body, {childList:true, subtree:true});
+    updateShopPins();
+  })();
+</script>
+<script>
+  // 사용자가 제공한 부산 지도 이미지를 기념품 교환 지도 배경으로 사용합니다.
+  (() => {
+    const useProvidedMap = () => {
+      const map = document.querySelector('#shopMapLayer');
+      const canvas = map?.querySelector('.busan-map');
+      if (!canvas || canvas.dataset.photoMap) return;
+      canvas.dataset.photoMap = 'true';
+      canvas.insertAdjacentHTML('afterbegin', '<img class="provided-map" src="assets/busan-exchange-map.png" alt="부산 기념품 교환 위치 지도">');
+      canvas.querySelector('.coast')?.remove();
+      const pins = {
+        '.station': {right:'14px', top:'52px'},
+        '.haeundae': {right:'73px', top:'94px'},
+        '.gwangan': {right:'145px', top:'112px'},
+        '.dadaepo': {left:'12px', bottom:'13px'}
+      };
+      Object.entries(pins).forEach(([selector, position]) => {
+        const pin = canvas.querySelector(selector);
+        if (pin) Object.assign(pin.style, position);
+      });
+    };
+    new MutationObserver(useProvidedMap).observe(document.body, {childList:true, subtree:true});
+    document.head.insertAdjacentHTML('beforeend', '<style>.busan-map:has(.provided-map){background:#c8e7ef}.provided-map{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}.busan-map:has(.provided-map):before{display:none}.busan-map:has(.provided-map) .map-pin{filter:drop-shadow(0 1px 1px #fff)}</style>');
+    useProvidedMap();
+  })();
+</script>
 </body></html>
