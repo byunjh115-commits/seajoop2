@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>?놁쨳 | 諛붾떎瑜??섏궡由щ뒗 以띻린</title>
+  <style>
+    :root{--navy:#123b53;--blue:#0579c9;--aqua:#2bc6bf;--cream:#fffaf0;--line:#d4e8e6;--ink:#17394d;--gold:#f7b733;--muted:#6d8793}*{box-sizing:border-box}body{margin:0;background:#e8f4f3;color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif}button{font:inherit;border:0;cursor:pointer}.app{width:min(100%,500px);min-height:100vh;margin:auto;background:var(--cream);box-shadow:0 0 30px #123b5322;overflow:hidden}.screen{display:none;min-height:100vh;padding:20px 18px 92px}.screen.on{display:block}.welcome{display:flex;flex-direction:column;justify-content:space-between;text-align:center;color:#fff;background:linear-gradient(#053d5a55,#0b294a99),url('assets/busan-calm-sunset.webp') center/cover}.logo{font-size:52px;font-weight:900;text-shadow:0 4px 8px #0008}.logo em{color:#ffd15a;font-style:normal}.tag{font-size:19px;font-weight:700}.lang{display:flex;gap:7px;justify-content:center}.lang button{padding:8px 10px;border-radius:999px;background:#ffffff40;color:#fff;border:1px solid #ffffff99}.lang button.on{background:#fff;color:var(--navy)}.modes{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mode{padding:18px 12px;text-align:left;border-radius:22px;background:#fffc;border:2px solid #fff;color:var(--ink);min-height:190px}.mode.tour{border-color:#81dff5}.mode.res{border-color:#62d2b1}.mode strong{display:block;font-size:22px;margin:12px 0 7px}.mode p{margin:0;color:#547485;line-height:1.5}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.back,.icon{width:42px;height:42px;border-radius:14px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:20px}.title{font-size:21px;font-weight:800}.hero{padding:20px;border-radius:20px;background:linear-gradient(135deg,#075f9c,#0d9ddd);color:#fff;margin-bottom:14px}.hero h2{margin:0 0 8px;font-size:25px}.hero p{margin:0;line-height:1.55}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.stat,.card{padding:15px;border:1px solid var(--line);border-radius:18px;background:#fff}.stat b{display:block;font-size:21px;color:var(--blue);margin-top:6px}.card h3{margin:0 0 10px;font-size:18px}.card p{line-height:1.55;color:#52707d}.primary,.secondary{width:100%;padding:16px;border-radius:15px;font-weight:800;font-size:17px;margin-top:12px}.primary{background:var(--blue);color:#fff}.secondary{background:#e8f6f4;color:#137269}.notice{font-size:13px;color:var(--muted);line-height:1.5}.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,500px);padding:10px 12px 15px;background:#fffffff2;border-top:1px solid var(--line);display:flex;justify-content:space-around;z-index:20}.bottom button{background:transparent;color:#55717e;font-size:11px}.bottom button span{display:block;font-size:21px;margin-bottom:3px}.bottom button.active{color:var(--blue);font-weight:800}.upload{border:2px dashed #78bed5;border-radius:20px;padding:22px;text-align:center;background:#f5fcff}.upload input{display:none}.preview{display:none;width:100%;max-height:260px;object-fit:cover;border-radius:15px;margin:12px 0}.analysis{display:none;margin-top:14px}.analysis.on{display:block}.result{border-left:5px solid var(--aqua);padding:13px;background:#effbf9;border-radius:12px}.reward{padding:28px;text-align:center}.reward .coin{font-size:57px}.ticket{display:inline-block;padding:5px 9px;border-radius:8px;background:#e7f4ff;color:#0875be;font-size:13px;font-weight:800}.aquarium{height:330px;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(#8be6ef 0%,#118dce 58%,#0c6eab 100%);border:5px solid #d5f6f4;box-shadow:inset 0 0 45px #0073a866}.aquarium:before,.aquarium:after{content:"";position:absolute;bottom:0;width:120%;height:70px;background:#0b6ea5;border-radius:50% 50% 0 0/30% 30% 0 0;opacity:.55}.aquarium:after{left:-50%;height:45px;background:#d4a86c;opacity:.75}.tank-life{position:absolute;width:74px;height:74px;background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 4px 3px #064c7670);touch-action:none;cursor:grab;z-index:3}.tank-life.drag{cursor:grabbing;animation:none!important}.picker{display:flex;gap:9px;overflow:auto;padding:13px 2px}.picker button{min-width:75px;background:#fff;border:2px solid #d7eceb;border-radius:14px;padding:6px}.picker button.in{border-color:#35b697;background:#edfffa}.picker i{display:block;width:47px;height:42px;background-size:contain;background-position:center;background-repeat:no-repeat}.picker small{font-size:10px;white-space:nowrap}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.entry{min-height:190px;text-align:center;padding:11px;border:1px solid var(--line);border-radius:17px;background:#fff}.entry img{width:78px;height:78px;object-fit:contain}.entry b{display:block;margin-top:4px}.entry p{font-size:12px;line-height:1.45;color:#5a7885;margin:7px 0}.lock{display:grid;place-items:center;color:#97a9af;background:#f4f7f7}.lock span{font-size:42px}.gacha{text-align:center;padding-top:30px}.orb{width:170px;height:170px;border-radius:50%;display:grid;place-items:center;margin:24px auto;background:radial-gradient(circle at 35% 30%,#fff,#c3f6f1 35%,#31a7d1);border:7px solid #fff;box-shadow:0 0 0 6px #91e4df,0 12px 25px #0a769944}.orb img{width:132px;height:132px;object-fit:contain}.orb.special{animation:shine .8s ease-in-out infinite alternate;box-shadow:0 0 0 6px #fff0a6,0 0 35px 14px #ffd75c}@keyframes shine{to{transform:scale(1.07);filter:brightness(1.18)}}.fade{animation:fadeout .7s ease forwards;animation-delay:2.1s}@keyframes fadeout{to{opacity:0;transform:scale(.65)}}.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.good{padding:15px;border:1px solid var(--line);border-radius:17px;background:#fff}.good span{font-size:28px}.good b{display:block;margin:8px 0}.good small{color:var(--blue);font-weight:800}.good button{width:100%;margin-top:10px;border-radius:9px;padding:9px;background:#e6f7f4;color:#0d746b;font-weight:800}.good button:disabled{background:#edf0ef;color:#aab7b5}.rank li{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line)}.modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;padding:30px 20px}.modal.on{display:grid;place-items:center}.modal-box{width:min(100%,380px);padding:25px;border-radius:23px;background:#fff;text-align:center}.barcode{height:78px;margin:18px 0;background:repeating-linear-gradient(90deg,#111 0 3px,#fff 3px 7px,#111 7px 9px,#fff 9px 13px)}@media(max-width:360px){.screen{padding-left:12px;padding-right:12px}.mode strong{font-size:19px}.grid{gap:7px}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <section class="screen welcome on" id="welcome">
+    <div><h1 class="logo">??em>以?/em></h1><p class="tag" data-t="tag">諛붾떎瑜??섏궡由щ뒗 以띻린</p><p data-t="choose">?대뼡 紐⑤뱶濡??쒖옉?좉퉴??</p></div>
+    <div class="lang"><button class="on" data-lang="ko">?쒓뎅??/button><button data-lang="en">English</button><button data-lang="zh">訝?뻼</button><button data-lang="ja">?ζ쑍沃?/button></div>
+    <div class="modes"><button class="mode tour" data-mode="tourist"><span>?㎡</span><strong data-t="tourist">愿愿묎컼 紐⑤뱶</strong><p data-t="touristD">?ы뻾 以? ?밸퀎??異붿뼲怨??쒖젙 蹂댁긽??諛쏆븘??</p></button><button class="mode res" data-mode="resident"><span>?룧</span><strong data-t="resident">嫄곗＜誘?紐⑤뱶</strong><p data-t="residentD">袁몄????쒕룞?쇰줈 諛붾떎? 吏??쓣 ?④퍡 諛붽퓭??</p></button></div>
+  </section>
+  <section class="screen" id="home"></section><section class="screen" id="verify"></section><section class="screen" id="reward"></section><section class="screen" id="tank"></section><section class="screen" id="book"></section><section class="screen" id="gacha"></section><section class="screen" id="shop"></section><section class="screen" id="rank"></section>
+  <div class="modal" id="modal"><div class="modal-box"><h2 id="modalTitle"></h2><p class="notice" data-t="barcodeInfo">?쒖뿰??諛붿퐫?쒖엯?덈떎. ?ㅼ젣 留ㅼ옣 援먰솚?먮뒗 蹂꾨룄 ?쒖뒪???곕룞???꾩슂?⑸땲??</p><div class="barcode"></div><b id="barcodeText"></b><button class="primary" id="closeModal" data-t="ok">?뺤씤</button></div></div>
+</main>
+<script type="text/plain">
+const creatures=[
+['?몃Ⅸ諛붾떎嫄곕턿','?⑤떒???깃퍖吏덉쓣 吏??諛붾떎嫄곕턿?댁뿉?? ?곕쑜??諛붾떎???댁큹諛?쓣 ?ㅼ뾼爾먯슂.'],['?곕룞媛由?,'二쇳솴?됯낵 ??以꾨Т?ш? ?좊챸?댁슂. 留먮???怨곸뿉???댁븘??'],['?⑤갑?곕룎怨좊옒','臾대━瑜?吏???ㅼ뾼移섎ŉ ?뚮━濡??뚰넻?섎뒗 ?뚭퀬?섏삁??'],['蹂대씪臾몄뼱','?щ뜜 媛쒖쓽 ?붾줈 諛붾떎 諛붾떏???먰뿕?댁슂.'],['遺덇??щ━','蹂?紐⑥뼇??紐몄쑝濡?諛붿쐞? 紐⑤옒 諛붾떏???吏곸뿬??'],['苑껉쾶','?볦쟻???깅뵳吏? ?⑤떒??吏묎쾶諛쒖쓣 媛議뚯뼱??'],['?댄뙆由?,'?щ챸??紐멸낵 湲?珥됱닔濡?臾쇱궡?????'],['?섎퉬怨좉린','?몃? 紐멸낵 寃? 臾대뒳媛 ?꾨쫫?ㅼ슫 ?고샇珥?臾쇨퀬湲곗삁??'],['?대쭏','瑗щ━濡??댁큹瑜?遺숈옟???밸퀎??臾쇨퀬湲곗삁??'],['蹂듭뼱','?꾪뿕???먮겮硫?紐몄쓣 ?κ?寃?遺??ㅼ슂.'],['?밸벑怨좊옒','而ㅻ떎? 瑗щ━吏?먮윭誘몃줈 癒?諛붾떎瑜??ы뻾?댁슂.'],['?곸뼱','諛붾떎 ?앺깭怨?洹좏삎???뺣뒗 ?좎꽑???ъ떇?먯삁??'],['?ㅼ쭠??,'湲?珥됱닔? ?쇨컖??吏?먮윭誘몃? 媛議뚯뼱??'],['誘몄뿭','?묒? 諛붾떎 ?앸Ъ?먭쾶 ?⑥쓣 怨녹쓣 ?댁＜???댁“瑜섏삁??'],['?덉슦','湲??붾벉?댁? 援щ??ъ쭊 紐몄쓣 媛吏?媛묎컖瑜섏삁??'],['?대떖','諛붾떎 ?꾩뿉 ?깆쓣 ?꾩슦怨?議곌컻瑜?癒밸뒗 ?ъ쑀瑜섏삁??'],['媛?ㅻ━','?볤퀬 ?⑹옉??紐몄쑝濡??좊벏???ㅼ뾼爾먯슂.'],['怨곗튂','湲몄춬??紐몄쑝濡?諛붿쐞?덉뿉???쇨뎬???대??댁슂.'],['踰붽퀬??,'寃?뺢낵 ??臾대뒳媛 ?쒕졆???묐룞??媛뺥븳 怨좊옒?덉슂.'],['?곕룎怨좊옒','?κ렐 ?대쭏? ?섏? 紐몄씠 ?뱀쭠??怨좊옒?덉슂.'],['?⑹깉移?,'湲멸퀬 毓곗”??遺由щ? 媛吏?鍮좊Ⅸ 臾쇨퀬湲곗삁??'],['珥덈줉諛붾떎嫄곕턿','珥덈줉鍮??깃퍖吏덉씠 ?뗫낫?대뒗 諛붾떎嫄곕턿?댁뿉??'],['怨좊옒?곸뼱','?먮컯??臾대뒳媛 ?꾨쫫?ㅼ슫 ?꾩＜ ???곸뼱?덉슂. ?⑥닚?섍쾶 ?뚮옉?ы넠??癒뱀뼱??'],['遺꾪솉?덉슦','遺꾪솉鍮?猿띿쭏怨?湲??붾벉?닿? ?뱀쭠?댁뿉??'],['?깃쾶','媛?쒕줈 紐몄쓣 蹂댄샇?섎ŉ 諛붿쐞??遺숈뼱 ?댁븘??'],['以꾨Т?щ굹鍮꾧퀬湲?,'?몃옉怨?寃??以꾨Т?ш? ?좊챸??臾쇨퀬湲곗삁??'],['?먮컯?대Ъ踰?,'?κ렐 ?쇨뎬怨??먮컯???몄쓣 媛吏??ъ쑀瑜섏삁??'],['以꾨Т?щЪ怨좉린','寃?뺢낵 ?섏뼇 以꾨Т?щ? 媛吏??대??댁삁??'],['?뺤썝?μ뼱','紐⑤옒 ?띿뿉 紐몄쓣 ?④린怨?怨좉컻留??대??댁슂.'],['珥덈줉蹂듭뼱','珥덈줉??臾대뒳媛 ?덈뒗 ?듯넻??蹂듭뼱?덉슂.'],['?뚮옉寃?,'?뚮? 吏묎쾶諛쒖씠 ?뗫낫?대뒗 媛?쾶??寃뚯삁??'],['?몃옉?섎퉬怨좉린','諛앹? ?몃? 紐몃튆???고샇珥?臾쇨퀬湲곗삁??'],['遺꾪솉?뚭퀬??,'遺꾪솉鍮?紐몄깋??留ㅻ젰?곸씤 ?뚭퀬?섏삁??'],['?ш뎄寃?,'?ш뎄泥섎읆 ?κ렐 ?깃퍖吏덇낵 湲?瑗щ━媛 ?뱀쭠?댁뿉??'],['釉붾（??,'?뚮? 紐멸낵 ?몃? 瑗щ━瑜?媛吏??쒕컻??臾쇨퀬湲곗삁??'],['留먮???,'苑껋쿂??蹂댁씠??珥됱닔濡??곕룞媛由ъ쓽 蹂닿툑?먮━媛 ?쇱슂.'],['??톬','吏?먮윭誘몄쿂??蹂???좉컻濡?臾쇱냽??鍮⑤━ ?ㅼ뾼爾먯슂.'],['?뚮옉??,'諛섏쭩?대뒗 ?뚮? 紐몃튆??媛吏??묒? 臾쇨퀬湲곗삁??'],['?곸옄蹂?,'?ㅻえ??紐멸낵 ?몃? 紐몃튆???낇듅??臾쇨퀬湲곗삁??'],['遺됱?蹂쇰씫','遺됱? 鍮꾨뒛???뗫낫?대뒗 諛붿쐞 臾쇨퀬湲곗삁??'],['媛由щ퉬','遺梨?紐⑥뼇 猿띾뜲湲곕? ?щ떕??吏㏐쾶 ?吏곸뿬??'],['?몃옉?ㅼ쭠??,'?몃? 紐몄깋怨?湲몄춬??珥됱닔媛 ?뱀쭠?댁뿉??'],['?듬Т議곌컻','?섏꽑 紐⑥뼇 猿띾뜲湲곌? ?꾨쫫?ㅼ슫 ?곗껜?숇Ъ?댁뿉??'],['鍮꾨떒?됱뼱','?뚮줉?щ줉??鍮꾨뒛??諛섏쭩?대ŉ ?좎뿰?섍쾶 ?ㅼ뾼爾먯슂.'],['?대！','?섎춪??媛숈? ?뚭린濡??댁큹 ?ъ씠???⑥뼱??'],['?먮컯?닿낡移?,'?먮Т?ш? ?덈뒗 湲몄춬??怨곗튂?덉슂.'],['?뚮옉伊먯튂','?뚮? 紐멸낵 ?몃? 瑗щ━媛 議고솕濡쒖슫 臾쇨퀬湲곗삁??'],['諛붾떎肄붾겮由?,'湲??꾨땲瑜?媛吏?李④???諛붾떎???ъ쑀瑜섏삁??'],['?뚮씪寃?,'鍮??뚮씪 猿띾뜲湲곕? ?깆뿉 吏怨??ㅻ???'],['?쏆깉移?,'?믪? ?깆??먮윭誘몄? 湲?遺由щ? 媛吏?鍮좊Ⅸ 臾쇨퀬湲곗삁??']
+].map((x,i)=>({...{name:x[0],desc:x[1],id:String(i+1).padStart(2,'0')},endangered:(i+1)%10===0}));
+const copy={ko:{tag:'諛붾떎瑜??섏궡由щ뒗 以띻린',choose:'?대뼡 紐⑤뱶濡??쒖옉?좉퉴??',tourist:'愿愿묎컼 紐⑤뱶',touristD:'?ы뻾 以? ?밸퀎??異붿뼲怨??쒖젙 蹂댁긽??諛쏆븘??',resident:'嫄곗＜誘?紐⑤뱶',residentD:'袁몄????쒕룞?쇰줈 諛붾떎? 吏??쓣 ?④퍡 諛붽퓭??',how:'?대뼸寃?李몄뿬?섎굹??',steps:'1. 二쇱슫 ?곕젅湲곕? ?ъ쭊?쇰줈 李띿뼱??\n2. AI媛 醫낅쪟? 泥섎━ 諛⑸쾿??遺꾩꽍?댁슂.\n3. ?몄쬆???앸굹硫?50P? 戮묎린沅뚯쓣 諛쏆븘??',start:'AI ?섍굅 ?몄쬆 ?쒖옉?섍린',pick:'?ъ쭊 ?좏깮?섍린',analyze:'AI 遺꾩꽍 寃곌낵',claim:'50P? 戮묎린沅?諛쏄린',again:'?ㅻⅨ ?ъ쭊 ?몄쬆?섍린',tank:'?섏쓽 ?섏”愿',drag:'?닿툑???앸Ъ???꾨Ⅴ硫??섏”愿???ｊ굅??類????덉뼱?? ?앸Ъ? ?쒕옒洹몃줈 ?꾩튂瑜?諛붽? ???덉뼱??',draw:'?댁뼇 ?앸Ъ 戮묎린',openDraw:'戮묎린 李??닿린',book:'?댁뼇 ?앸Ъ ?꾧컧',openBook:'?꾧컧 蹂닿린',shop:'?ъ씤???곸젏',rank:'?붽컙 ??궧',ticket:'戮묎린沅?,empty:'戮묎린濡??앸Ъ??癒쇱? ?닿툑??二쇱꽭??',use:'戮묎린沅??ъ슜?섍린',noTicket:'戮묎린沅뚯씠 ?꾩슂?댁슂.',locked:'?좉릿 ?앸Ъ',special:'?ㅽ럹??',variant:'?됱긽 蹂??,barcodeInfo:'?쒖뿰??諛붿퐫?쒖엯?덈떎. ?ㅼ젣 留ㅼ옣 援먰솚?먮뒗 蹂꾨룄 ?쒖뒪???곕룞???꾩슂?⑸땲??',ok:'?뺤씤',back:'??,home:'??,souvenirs:'愿愿묎컼 湲곕뀗??,residentShop:'嫄곗＜誘?由ъ썙??,buy:'援щℓ?섍린',endangered:'硫몄쥌?꾧린醫?,dispose:'沅뚯옣 泥섎━: ?댁슜臾쇱쓣 鍮꾩슫 ??遺꾨━諛곗텧?⑥뿉 ?ｌ뼱 二쇱꽭??'},en:{tag:'Pick up, restore the sea',choose:'Choose your mode',tourist:'Tourist mode',touristD:'Make a special travel memory.',resident:'Resident mode',residentD:'Protect the sea with ongoing action.',how:'How to join?',steps:'1. Photograph litter you collected.\n2. AI analyzes its type and disposal.\n3. Receive 50 points and a draw ticket.',start:'Start AI verification',pick:'Choose a photo',analyze:'AI analysis',claim:'Claim 50P + ticket',again:'Verify another photo',tank:'My aquarium',drag:'Only unlocked creatures can be placed. Drag to move them.',draw:'Marine draw',openDraw:'Open draw',book:'Marine encyclopedia',openBook:'View encyclopedia',shop:'Point shop',rank:'Monthly ranking',ticket:'Tickets',empty:'Unlock a creature through a draw first.',use:'Use ticket',noTicket:'A ticket is needed.',locked:'Locked',special:'SPECIAL!',variant:'Color variant',barcodeInfo:'Demo barcode. Real redemption needs store integration.',ok:'OK',back:'??,home:'Home',souvenirs:'Tourist souvenirs',residentShop:'Resident rewards',buy:'Buy',endangered:'Endangered',dispose:'Suggested disposal: empty it and use the correct recycling bin.'},zh:{tag:'?얕돈?껃쑟竊뚦쨳?뤸돈域?,choose:'瑥룬됪떓與▼폀',tourist:'歷멨?與▼폀',touristD:'?쇾툔?밧닽?꾣뾽烏뚦썮恙녴?,resident:'掠끾컩與▼폀',residentD:'?곭뺌若덃뒪役룡큾?뚨ㅎ?뷩?,how:'倻귚퐬?귛뒥竊?,steps:'1. ?띷몖?▼댆?꾢엪?얇?n2. AI?녷옄燁띸굳?뚦쨪?녷뼶力뺛?n3. ?룟풓50燁?늽?뚧듊也뽩댏??,start:'凉冶딞I溫ㅸ칮',pick:'?됪떓?㎫뎴',analyze:'AI?녷옄瀯볠옖',claim:'窯녶룚50燁?늽?뚧듊也뽩댏',again:'溫ㅸ칮?╊?凉좂뀱??,tank:'?묊쉪麗닸뿈腰?,drag:'?よ꺗?얍뀯藥꿱㎗?곭쉪?잏돥?귛룾?뽩뒯?밧룜鵝띸쉰??,draw:'役룡큾?잏돥?썲쪝',openDraw:'?볟??썲쪝',book:'役룡큾?잏돥?얗돱',openBook:'?η쐦?얗돱',shop:'燁?늽?녶틭',rank:'?덂벧?믣릫',ticket:'?썲쪝??,empty:'瑥룟뀍?싪퓝?썲쪝鰲ｉ봺?잏돥??,use:'鵝욜뵪?썲쪝??,noTicket:'?誤곫듊也뽩댏??,locked:'?よ㎗??,special:'?밧닽竊?,variant:'窯쒑돯?섇펰',barcodeInfo:'瓦숁삸轢붺ㅊ?←쟻竊뚦츩?끻뀘?????죱野방렏??,ok:'簾??',back:'??,home:'訝삯〉',souvenirs:'歷멨?瀛ゅ영??,residentShop:'掠끾컩也뽩뒻',buy:'兀?물',endangered:'嚥믣뜳?⑴쭕',dispose:'兩븃?鸚꾤릤竊싧믥㈉?롦붂?ζ?簾?쉪?녺굳?욄뵸嶸긱?},ja:{tag:'?얇겂?╉곫돈?믡굠?욍걣?덀굢?쎼굠??,choose:'?㏂꺖?됥굮?멥굯?㎯걦?졼걬??,tourist:'誤녑뀎若㏂깴?쇈깋',touristD:'?끹겗?밧닪?ゆ앫걚?뷩굮鵝쒌굤?얇걲??,resident:'鵝뤸컩?㏂꺖??,residentD:'泳숂텥?꾠겒域삣땿?㎪돈?ⓨ쑑?잆굮若덀굤?얇걲??,how:'?귛뒥?방퀡',steps:'1. ?얇겂?잆걫?욍굮??쉽?쀣겲?쇻?n2. AI?뚨Ŧ窈욁겏??릤?방퀡?믣늽?먦걮?얇걲??n3. 50?앫궎?녈깉?ⓩ듊?멨댏?믣룛?묈룚?듽겲?쇻?,start:'AI?욃룑沃띹㉫?믣쭓?곥굥',pick:'?숂쐿?믧겦??,analyze:'AI?녷옄永먩옖',claim:'50P?ⓩ듊?멨댏?믣룛?묈룚??,again:'?γ겗?숂쐿?믦첀鼇쇈걲??,tank:'燁곥겗麗닸뿈繞?,drag:'鰲ｆ붂歷덀겳??뵟?⒲걽?묆굮?γ굦?됥굦?얇걲?귙깋?⒲긿?겹겎燁삣땿?㎯걤?얇걲??,draw:'役룡큾?잏돥?с긽??,openDraw:'?с긽?ｃ굮?뗣걦',book:'役룡큾?잏돥?녜몣',openBook:'?녜몣?믦쫳??,shop:'?앫궎?녈깉?룔깾?껁깤',rank:'?덆뼋?⒲꺍??꺍??,ticket:'?썽겦??,empty:'?덀겓?с긽?ｃ겎?잏돥?믦㎗?얇걮?╉걦?졼걬?꾠?,use:'?썽겦?멥굮鵝욍걝',noTicket:'?썽겦?멥걣恙낁쫨?㎯걲??,locked:'??긿??릎',special:'?밤깪?룔깵?ワ펯',variant:'?꿴걬??,barcodeInfo:'?뉎깴?ⓦ깘?쇈궠?쇈깋?㎯걲?귛츪?쎼겗雅ㅶ룢?ャ겘?ｆ맳?뚦퓚誤곥겎?쇻?,ok:'閻븃첀',back:'??,home:'?쎼꺖??,souvenirs:'誤녑뀎若㏂겗?듿쐿??,residentShop:'鵝뤸컩?ゃ꺈?쇈깋',buy:'蘊쇔뀯',endangered:'永뜻퍎?길깾葉?,dispose:'?ⓨⅷ??릤竊싦릎翁ャ굮令뷩겓?쀣겍?곲겑?뉎겓?녶닪?쀣겍?뤵걽?뺛걚??}};
+let lang='ko',mode='',points=0,tickets=0,unlocked=[],placed=[],photo='';const $=s=>document.querySelector(s);const t=k=>copy[lang][k]||copy.ko[k]||k;const asset=c=>`assets/creatures/creature-${c.id}.png`;
+function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on'));$('#'+id).classList.add('on');render()}
+function header(title){return `<div class="top"><button class="back" data-go="home">${t('back')}</button><b class="title">${title}</b><span style="width:42px"></span></div>`}
+function nav(active){return `<nav class="bottom"><button data-go="home" class="${active==='home'?'active':''}"><span>??/span>${t('home')}</button><button data-go="tank" class="${active==='tank'?'active':''}"><span>?맆</span>${t('tank')}</button><button data-go="gacha" class="${active==='gacha'?'active':''}"><span>?럞</span>${t('draw')}</button><button data-go="book" class="${active==='book'?'active':''}"><span>?뱰</span>${t('book')}</button><button data-go="shop" class="${active==='shop'?'active':''}"><span>?썚截?/span>${t('shop')}</button></nav>`}
+function render(){if(!mode)return;document.documentElement.lang=lang;$('#home').innerHTML=header(mode==='tourist'?'?㎡ '+t('tourist'):'?룧 '+t('resident'))+`<div class="hero"><h2>${t('how')}</h2><p style="white-space:pre-line">${t('steps')}</p></div><div class="stats"><div class="stat">P<b>${points}P</b></div><div class="stat">?렅 ${t('ticket')}<b>${tickets}</b></div></div><button class="primary" data-go="verify">?벜 ${t('start')}</button>${mode==='resident'?`<button class="secondary" data-go="rank">?룇 ${t('rank')}</button>`:''}${nav('home')}`;
+$('#verify').innerHTML=header('?벜 '+t('start'))+`<div class="upload"><label for="photo"><b>?뼹截?${t('pick')}</b><p class="notice">JPG, PNG, WEBP</p></label><input id="photo" type="file" accept="image/*"><img class="preview" id="preview"></div><div id="analysis" class="analysis"><div class="card"><h3>??${t('analyze')}</h3><div class="result"><b id="trashType">?뚮씪?ㅽ떛 ?섑듃蹂?/b><p id="trashGuide">${t('dispose')}</p><small class="notice">AI ?대?吏 遺꾩꽍 ?곕え</small></div></div><button class="primary" id="claim">?럞 ${t('claim')}</button></div>${nav('home')}`;
+$('#reward').innerHTML=header('?럦 '+t('claim'))+`<div class="card reward"><div class="coin">?첌</div><h2>+50P 쨌 ?렅 +1</h2><p class="notice">${t('claim')}</p><button class="primary" data-go="gacha">${t('openDraw')}</button><button class="secondary" data-go="verify">${t('again')}</button></div>${nav('home')}`;
+let pick=unlocked.map(i=>`<button data-place="${i}" class="${placed.includes(i)?'in':''}"><i style="background-image:url('${asset(creatures[i])}')"></i><small>${creatures[i].name}</small></button>`).join('')||`<div class="empty">?뵏 ${t('empty')}</div>`;
+$('#tank').innerHTML=header('?맆 '+t('tank'))+`<div class="stats"><div class="stat">P<b>${points}P</b></div><div class="stat">?렅 ${t('ticket')}<b>${tickets}</b></div></div><div class="aquarium" id="aquarium"></div><p class="notice">${t('drag')}</p><div class="picker">${pick}</div><button class="primary" data-go="gacha">?럞 ${t('openDraw')}</button><button class="secondary" data-go="book">?뱰 ${t('openBook')}</button>${nav('tank')}`;placeLives();
+$('#book').innerHTML=header('?뱰 '+t('book'))+`<p class="notice">${unlocked.length}/50</p><div class="grid">${creatures.map((c,i)=>unlocked.includes(i)?`<article class="entry"><img src="${asset(c)}"><b>${c.name}</b><p>${c.desc}</p>${c.endangered?`<small class="ticket">${t('endangered')}</small>`:''}</article>`:`<article class="entry lock"><span>?뵏</span><b>${t('locked')}</b></article>`).join('')}</div>${nav('book')}`;
+$('#gacha').innerHTML=header('?럞 '+t('draw'))+`<div class="gacha"><span class="ticket">?렅 ${t('ticket')} ${tickets}</span><div class="orb" id="orb">?</div><h2 id="drawName">${t('draw')}</h2><p class="notice" id="drawDesc">${t('noTicket')}</p><button class="primary" id="drawBtn">?렅 ${t('use')}</button></div>${nav('gacha')}`;
+const tourist=[['?뙃','愿묒븞?援??諛곗?',550],['?맟','?뚭퀬???諛곗?',650],['?븡截?,'媛덈ℓ湲??諛곗?',600],['?맊','諛붾떎嫄곕턿 ?諛곗?',700],['?뵎','愿묒븞?援??ㅻ쭅',1100],['?㎠','遺??留덇렇??,900],['?뭽','?댁슫? ?쎌꽌 ?명듃',1200],['?몴','遺???쒖젙 ?먯퐫諛?,1800]],resident=[['?렅截?,'遺??吏???곹뭹沅?,4000],['??,'移댄럹 荑좏룿',2500],['?룵','?몄쓽??荑좏룿',3000],['?렗','?곹솕 愿?뚭텒',6000],['?띂截?,'吏???앹궗 荑좏룿',5000],['?쉶','?以묎탳??荑좏룿',3500]];
+let goods=mode==='tourist'?tourist:resident;$('#shop').innerHTML=header('?썚截?'+t('shop'))+`<div class="hero"><h2>${mode==='tourist'?t('souvenirs'):t('residentShop')}</h2><p>P ${points}</p></div><div class="shop-grid">${goods.map((x,i)=>`<article class="good"><span>${x[0]}</span><b>${x[1]}</b><small>${x[2]}P</small><button data-buy="${i}" ${points<x[2]?'disabled':''}>${t('buy')}</button></article>`).join('')}</div>${mode==='resident'?`<button class="secondary" data-go="rank">?룇 ${t('rank')}</button>`:''}${nav('shop')}`;
+$('#rank').innerHTML=header('?룇 '+t('rank'))+`<div class="card"><h3>?곸쐞 5紐??밸퀎 ?좊Ъ (?쒖뿰)</h3><ol class="rank"><li><b>1. 諛붾떎吏?댁씠</b><span>5,200P</span></li><li><b>2. ?몃Ⅸ?뚮룄</b><span>4,850P</span></li><li><b>3. ?댁슫?移쒓뎄</b><span>4,300P</span></li><li><b>4. 源⑤걮?쒕컮??/b><span>3,980P</span></li><li><b>5. ?섏쓽湲곕줉</b><span>${points}P</span></li></ol></div>${nav('home')}`}
+function placeLives(){const box=$('#aquarium');if(!box)return;placed.forEach((id,n)=>{let e=document.createElement('i');e.className='tank-life';e.dataset.id=id;e.style.backgroundImage=`url('${asset(creatures[id])}')`;e.style.left=`${8+(n*19)%75}%`;e.style.top=`${14+(n*27)%63}%`;e.style.animation=`swim${id%4} ${4+id%4}s ease-in-out infinite alternate`;drag(e);box.append(e)})}
+function drag(e){let moving=false;e.onpointerdown=v=>{moving=true;e.classList.add('drag');e.setPointerCapture(v.pointerId)};e.onpointermove=v=>{if(!moving)return;let r=$('#aquarium').getBoundingClientRect();e.style.left=Math.max(0,Math.min(r.width-72,v.clientX-r.left-36))+'px';e.style.top=Math.max(0,Math.min(r.height-72,v.clientY-r.top-36))+'px'};e.onpointerup=()=>{moving=false;e.classList.remove('drag')}}
+function draw(){if(!tickets){$('#drawDesc').textContent=t('noTicket');return}let choices=creatures.map((_,i)=>i).filter(i=>!unlocked.includes(i));if(!choices.length){$('#drawDesc').textContent='50/50';return}tickets--;let endangered=Math.random()<.10;let pool=choices.filter(i=>creatures[i].endangered===endangered);if(!pool.length)pool=choices;let i=pool[Math.floor(Math.random()*pool.length)],variant=Math.random()<.05,c=creatures[i];unlocked.push(i);let orb=$('#orb');orb.innerHTML=`<img src="${asset(c)}">`;orb.className='orb '+((endangered||variant)?'special':'');$('#drawName').textContent=(endangered?'??':'')+c.name+(variant?' 쨌 '+t('variant'):'');$('#drawDesc').textContent=c.desc;setTimeout(()=>{orb.classList.add('fade');setTimeout(()=>{orb.className='orb';orb.textContent='?';$('#drawName').textContent=t('draw');$('#drawDesc').textContent=t('noTicket');render()},700)},2800)}
+document.addEventListener('click',e=>{let g=e.target.closest('[data-go]');if(g)return go(g.dataset.go);let m=e.target.closest('[data-mode]');if(m){mode=m.dataset.mode;return go('home')}let p=e.target.closest('[data-place]');if(p){let i=+p.dataset.place;placed.includes(i)?placed=placed.filter(x=>x!==i):placed.length<8&&placed.push(i);return render()}if(e.target.id==='drawBtn')return draw();if(e.target.id==='claim'&&photo){points+=50;tickets++;photo='';return go('reward')}let b=e.target.closest('[data-buy]');if(b){let item=goods[+b.dataset.buy];if(points<item[2])return;points-=item[2];$('#modalTitle').textContent=item[1];$('#barcodeText').textContent='SSEUJUP-'+Date.now().toString().slice(-8);$('#modal').classList.add('on');render()}if(e.target.id==='closeModal')$('#modal').classList.remove('on')});
+document.addEventListener('change',e=>{if(e.target.id!=='photo'||!e.target.files[0])return;let f=e.target.files[0];photo=f;let pre=$('#preview');pre.src=URL.createObjectURL(f);pre.style.display='block';let name=f.name.toLowerCase(),type=name.includes('can')||name.includes('罹?)?'?뚮（誘몃뒆 罹?:name.includes('glass')||name.includes('?좊━')?'?좊━蹂?:name.includes('paper')||name.includes('醫낆씠')?'醫낆씠 ?곕젅湲?:'?뚮씪?ㅽ떛 ?섑듃蹂?;$('#trashType').textContent=type;$('#analysis').classList.add('on')});
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;document.querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('on',x===b));if(mode)render();document.querySelectorAll('[data-t]').forEach(x=>x.textContent=t(x.dataset.t))});
+</script>
+<style>@keyframes swim0{to{transform:translate(46px,-18px) rotate(7deg)}}@keyframes swim1{50%{transform:translate(-28px,28px)}to{transform:translate(30px,10px)}}@keyframes swim2{25%{transform:translate(38px,18px)}75%{transform:translate(-20px,-20px)}}@keyframes swim3{to{transform:translate(-38px,18px) rotate(-6deg)}}</style>
+<script>
+/* 독립 실행 복구 스크립트: 앞선 손상 스크립트와 관계없이 앱을 동작시킵니다. */
+(() => {
+  const app = document.querySelector('.app');
+  const animals = [
+    ['푸른바다거북','따뜻한 바다의 해초밭을 헤엄치는 거북이에요.'],['흰동가리','말미잘 곁에서 사는 주황색 줄무늬 물고기예요.'],['남방큰돌고래','무리를 지어 소통하는 똑똑한 돌고래예요.'],['문어','여덟 개의 팔로 바다 바닥을 탐험해요.'],['불가사리','별 모양 몸으로 바위와 모래 바닥을 움직여요.'],['꽃게','단단한 집게발을 가진 갯벌 친구예요.'],['해파리','투명한 몸과 긴 촉수로 물살을 타요.'],['나비고기','산호초 주변을 헤엄치는 노란 물고기예요.'],['해마','꼬리로 해초를 붙잡는 물고기예요.'],['복어','위험할 때 몸을 둥글게 부풀려요.'],['혹등고래','커다란 꼬리로 먼 바다를 여행해요.'],['상어','바다 생태계 균형을 돕는 포식자예요.'],['오징어','긴 촉수로 빠르게 이동하는 연체동물이에요.'],['미역','작은 생물에게 숨을 곳을 내주는 해조류예요.'],['새우','긴 더듬이를 가진 작은 갑각류예요.'],['해달','바다 위에 등을 띄우고 쉬는 포유류예요.'],['가오리','넓고 납작한 몸으로 날듯이 헤엄쳐요.'],['곰치','바위틈에서 얼굴을 내미는 길쭉한 물고기예요.'],['범고래','검정과 흰 무늬가 뚜렷한 고래예요.'],['흰돌고래','하얀 몸과 둥근 이마가 특징이에요.'],['황새치','긴 부리로 빠르게 헤엄치는 물고기예요.'],['초록바다거북','초록빛 등껍질을 가진 바다거북이에요.'],['고래상어','점박이 무늬가 아름답고 플랑크톤을 먹는 온순한 상어예요.'],['분홍새우','분홍빛 껍질과 긴 더듬이가 특징이에요.'],['성게','가시로 몸을 보호하는 둥근 바다 생물이에요.'],['줄무늬나비고기','노랑과 검정 줄무늬가 선명한 물고기예요.'],['점박이물범','점박이 털을 가진 해양 포유류예요.'],['줄무늬물고기','검정과 하양 줄무늬를 가진 열대어예요.'],['정원장어','모래에서 고개만 내밀고 흔들려요.'],['초록복어','초록색 무늬가 있는 통통한 복어예요.'],['파랑게','파란 집게발이 돋보이는 게예요.'],['노랑나비고기','밝은 노란 몸빛의 산호초 물고기예요.'],['분홍돌고래','분홍빛 몸색이 매력적인 돌고래예요.'],['투구게','투구 같은 등껍질과 긴 꼬리가 특징이에요.'],['블루탱','파란 몸과 노란 꼬리를 가진 물고기예요.'],['말미잘','흰동가리의 보금자리가 되는 촉수 생물이에요.'],['펭귄','날개로 물속을 빠르게 헤엄치는 바다새예요.'],['파랑돔','반짝이는 파란 몸빛의 작은 물고기예요.'],['상자복','네모난 노란 몸이 독특한 물고기예요.'],['붉은볼락','붉은 비늘을 가진 바위 물고기예요.'],['가리비','부채 모양 껍데기를 가진 조개예요.'],['노랑오징어','노란 몸빛이 특징인 민첩한 오징어예요.'],['앵무조개','나선 모양 껍데기를 가진 연체동물이에요.'],['비단잉어','알록달록한 비늘이 빛나는 물고기예요.'],['해룡','해초처럼 생긴 돌기로 몸을 숨겨요.'],['점박이곰치','점무늬가 있는 길쭉한 곰치예요.'],['파랑쥐치','파란 몸과 노란 꼬리가 조화로워요.'],['바다코끼리','긴 엄니를 가진 차가운 바다의 포유류예요.'],['소라게','빈 소라 껍데기를 등에 지고 다녀요.'],['돛새치','높은 등지느러미와 긴 부리를 가졌어요.']
+  ];
+  let state = {mode:'', points:0, tickets:0, unlocked:[], placed:[], photo:false, lang:'한국어'};
+  const image = i => `assets/creatures/creature-${String(i + 1).padStart(2,'0')}.png`;
+  const nav = () => `<nav class="bottom"><button data-page="home"><span>⌂</span>홈</button><button data-page="tank"><span>🐠</span>수족관</button><button data-page="draw"><span>🎁</span>뽑기 (${state.tickets})</button><button data-page="book"><span>📖</span>도감</button><button data-page="shop"><span>🛍️</span>상점</button></nav>`;
+  const header = title => `<div class="top"><button class="back" data-page="home">‹</button><b class="title">${title}</b><span style="width:42px"></span></div>`;
+  function welcome(){app.innerHTML=`<section class="screen welcome on"><div><h1 class="logo">ㅆ<em>줍</em></h1><p class="tag">바다를 되살리는 줍기</p><p>언어와 모드를 선택해 시작하세요.</p></div><div class="lang"><button data-language="한국어" class="on">한국어</button><button data-language="English">English</button><button data-language="中文">中文</button><button data-language="日本語">日本語</button></div><div class="modes"><button class="mode tour" data-mode="tourist"><span>🧳</span><strong>관광객 모드</strong><p>여행 중 해변 정화에 참여하고 부산 기념품을 모아요.</p></button><button class="mode res" data-mode="resident"><span>🏠</span><strong>거주민 모드</strong><p>꾸준한 활동으로 포인트와 지역 보상을 모아요.</p></button></div></section>`}
+  function home(){app.innerHTML=`<section class="screen on">${header(state.mode==='tourist'?'🧳 관광객 모드':'🏠 거주민 모드')}<div class="hero"><h2>어떻게 참여하나요?</h2><p>1. 주운 쓰레기를 사진으로 찍어요.<br>2. AI가 종류와 처리 방법을 분석해요.<br>3. 사진 한 장 인증 후 50P와 뽑기권 1장을 받아요.</p></div><div class="stats"><div class="stat">보유 포인트<b>${state.points}P</b></div><div class="stat">뽑기권<b>🎟 ${state.tickets}</b></div></div><button class="primary" data-page="verify">📷 AI 수거 인증 시작하기</button>${state.mode==='resident'?'<button class="secondary" data-page="rank">🏆 거주민 월간 랭킹</button>':''}${nav()}</section>`}
+  function verify(){app.innerHTML=`<section class="screen on">${header('📷 AI 수거 인증')}<div class="upload"><label for="upload"><b>🖼️ 쓰레기 사진 선택하기</b><p class="notice">사진은 AI 분석 데모에만 사용됩니다.</p></label><input id="upload" type="file" accept="image/*"><img id="photoPreview" class="preview"></div><div id="aiResult" class="analysis"><div class="card"><h3>✨ AI 분석 결과</h3><div class="result"><b id="kind">플라스틱 페트병</b><p>내용물을 비우고 알맞은 분리배출함에 넣어 주세요.</p><small class="notice">AI 이미지 분석 데모</small></div></div><button class="primary" data-claim>🎁 50P와 뽑기권 받기</button></div>${nav()}</section>`}
+  function reward(){app.innerHTML=`<section class="screen on">${header('🎉 인증 보상')}<div class="card reward"><div class="coin">🪙</div><h2>+50P · 🎟 +1</h2><p class="notice">사진 한 장당 보상은 한 번만 받을 수 있어요.</p><button class="primary" data-page="draw">해양 생물 뽑기 하러 가기</button><button class="secondary" data-page="verify">다른 사진 인증하기</button></div>${nav()}</section>`}
+  function tank(){let list=state.unlocked.map(i=>`<button data-place="${i}" class="${state.placed.includes(i)?'in':''}"><i style="background-image:url('${image(i)}')"></i><small>${animals[i][0]}</small></button>`).join('')||'<div class="empty">🔒 뽑기로 해금한 생물만 수족관에 넣을 수 있어요.</div>';app.innerHTML=`<section class="screen on">${header('🐠 나의 수족관')}<div class="stats"><div class="stat">포인트<b>${state.points}P</b></div><div class="stat">뽑기권<b>${state.tickets}</b></div></div><div class="aquarium" id="aqua"></div><p class="notice">아래 해금 생물을 눌러 넣고 빼세요. 생물은 드래그로 옮길 수 있어요.</p><div class="picker">${list}</div><button class="primary" data-page="draw">🎁 뽑기 창 열기</button>${nav()}</section>`; const box=document.querySelector('#aqua');state.placed.forEach((id,n)=>{let el=document.createElement('i');el.className='tank-life';el.style.backgroundImage=`url('${image(id)}')`;el.style.left=`${8+(n*17)%75}%`;el.style.top=`${12+(n*23)%65}%`;el.style.animation=`swim${id%4} ${4+(id%3)}s ease-in-out infinite alternate`;makeDrag(el);box.append(el)})}
+  function book(){app.innerHTML=`<section class="screen on">${header('📖 해양 생물 도감')}<p class="notice">해금 ${state.unlocked.length}/50 · 잠긴 생물은 뽑기로 만날 수 있어요.</p><div class="grid">${animals.map((a,i)=>state.unlocked.includes(i)?`<article class="entry"><img src="${image(i)}"><b>${a[0]}</b><p>${a[1]}</p>${(i+1)%10===0?'<small class="ticket">멸종위기종</small>':''}</article>`:'<article class="entry lock"><span>🔒</span><b>잠긴 생물</b></article>').join('')}</div>${nav()}</section>`}
+  function draw(){app.innerHTML=`<section class="screen on">${header('🎁 해양 생물 뽑기')}<div class="gacha"><span class="ticket">🎟 뽑기권 ${state.tickets}</span><div id="orb" class="orb">?</div><h2 id="drawTitle">행운의 캡슐</h2><p id="drawText" class="notice">뽑기권으로 새로운 바다 친구를 만나세요.</p><button id="drawButton" class="primary">🎟 뽑기권 사용하기</button></div>${nav()}</section>`}
+  function shop(){let tourist=[['🌉','광안대교 핀배지',550],['🐬','돌고래 핀배지',650],['🕊️','갈매기 핀배지',600],['🐢','바다거북 핀배지',700],['🔑','광안대교 키링',1100],['🧲','부산 마그넷',900],['💌','해운대 엽서 세트',1200],['👜','부산 한정 에코백',1800]],resident=[['🎟️','부산 지역 상품권',4000],['☕','카페 쿠폰',2500],['🏪','편의점 쿠폰',3000],['🎬','영화 관람권',6000],['🍽️','지역 식사 쿠폰',5000]];let goods=state.mode==='tourist'?tourist:resident;app.innerHTML=`<section class="screen on">${header('🛍️ 포인트 상점')}<div class="hero"><h2>${state.mode==='tourist'?'관광객 부산 기념품':'거주민 리워드'}</h2><p>보유 포인트: ${state.points}P</p></div><div class="shop-grid">${goods.map((g,i)=>`<article class="good"><span>${g[0]}</span><b>${g[1]}</b><small>${g[2]}P</small><button data-buy="${i}" ${state.points<g[2]?'disabled':''}>구매하기</button></article>`).join('')}</div>${state.mode==='resident'?'<button class="secondary" data-page="rank">🏆 월간 랭킹 보기</button>':''}${nav()}</section>`; app.dataset.goods=JSON.stringify(goods)}
+  function rank(){app.innerHTML=`<section class="screen on">${header('🏆 거주민 월간 랭킹')}<div class="card"><h3>상위 5명 특별 선물 (시연)</h3><ol class="rank"><li><b>1. 바다지킴이</b><span>5,200P</span></li><li><b>2. 푸른파도</b><span>4,850P</span></li><li><b>3. 해운대친구</b><span>4,300P</span></li><li><b>4. 깨끗한바다</b><span>3,980P</span></li><li><b>5. 나의기록</b><span>${state.points}P</span></li></ol></div>${nav()}</section>`}
+  function page(name){({home,verify,reward,tank,book,draw,shop,rank}[name]||home)()}
+  function makeDrag(el){let down=false;el.onpointerdown=e=>{down=true;el.setPointerCapture(e.pointerId);el.classList.add('drag')};el.onpointermove=e=>{if(!down)return;let r=document.querySelector('#aqua').getBoundingClientRect();el.style.left=Math.max(0,Math.min(r.width-74,e.clientX-r.left-37))+'px';el.style.top=Math.max(0,Math.min(r.height-74,e.clientY-r.top-37))+'px'};el.onpointerup=()=>{down=false;el.classList.remove('drag')}}
+  app.addEventListener('click',e=>{let mode=e.target.closest('[data-mode]');if(mode){state.mode=mode.dataset.mode;return home()}let p=e.target.closest('[data-page]');if(p)return page(p.dataset.page);let place=e.target.closest('[data-place]');if(place){let i=+place.dataset.place;if(state.placed.includes(i))state.placed=state.placed.filter(x=>x!==i);else if(state.placed.length<8)state.placed.push(i);return tank()}if(e.target.closest('[data-claim]')&&state.photo){state.points+=50;state.tickets++;state.photo=false;return reward()}if(e.target.id==='drawButton'){if(!state.tickets){document.querySelector('#drawText').textContent='뽑기권이 필요해요.';return}let choices=animals.map((_,i)=>i).filter(i=>!state.unlocked.includes(i));if(!choices.length)return;state.tickets--;let special=Math.random()<.10,variant=Math.random()<.05;let i=choices[Math.floor(Math.random()*choices.length)];state.unlocked.push(i);let orb=document.querySelector('#orb');orb.innerHTML=`<img src="${image(i)}">`;orb.className='orb '+(special||variant?'special':'');document.querySelector('#drawTitle').textContent=(special?'✨ 스페셜 ':'')+animals[i][0]+(variant?' · 색상 변이':'');document.querySelector('#drawText').textContent=animals[i][1];setTimeout(()=>{orb.classList.add('fade')},2200);return}let buy=e.target.closest('[data-buy]');if(buy){let item=JSON.parse(app.dataset.goods)[+buy.dataset.buy];if(state.points<item[2])return;state.points-=item[2];alert(`${item[1]} 구매 완료!\n바코드: SSEUJUP-${Date.now().toString().slice(-8)}`);return shop()}let language=e.target.closest('[data-language]');if(language){state.lang=language.dataset.language;document.querySelectorAll('[data-language]').forEach(x=>x.classList.toggle('on',x===language));}});
+  app.addEventListener('change',e=>{if(e.target.id!=='upload'||!e.target.files[0])return;state.photo=true;let img=document.querySelector('#photoPreview');img.src=URL.createObjectURL(e.target.files[0]);img.style.display='block';document.querySelector('#aiResult').classList.add('on')});
+  welcome();
+})();
+</script>
+<script>
+  // 기념품 구매 후 표시되는 시연용 바코드 교환권입니다.
+  (() => {
+    const makeBarcode = code => {
+      let seed = 0;
+      for (const char of code) seed = (seed * 31 + char.charCodeAt(0)) >>> 0;
+      let bars = '';
+      for (let x = 12; x < 308; x += 4) {
+        seed = (seed * 1664525 + 1013904223) >>> 0;
+        const width = 2 + (seed % 3) * 2;
+        bars += `<rect x="${x}" y="10" width="${width}" height="82" fill="#101820"/>`;
+      }
+      return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="320" height="118" viewBox="0 0 320 118"><rect width="320" height="118" rx="12" fill="white"/>${bars}<text x="160" y="110" text-anchor="middle" font-family="Arial" font-size="12" fill="#101820">${code}</text></svg>`)}`;
+    };
+    const originalAlert = window.alert.bind(window);
+    window.alert = message => {
+      if (!String(message).includes('바코드:')) return originalAlert(message);
+      const [title, codeLine] = String(message).split(/\n|\\n/);
+      const code = (codeLine || '바코드: SSEUJUP-DEMO').replace('바코드: ', '');
+      const old = document.querySelector('#barcodeVoucher');
+      if (old) old.remove();
+      document.body.insertAdjacentHTML('beforeend', `<div id="barcodeVoucher" class="voucher-layer"><article class="voucher-card"><span class="voucher-icon">🎁</span><h2>${title}</h2><p>기념품 교환 바코드</p><img alt="${code} 바코드" src="${makeBarcode(code)}"><small>시연용 바코드입니다. 기념품샵에서 스캔하면 교환할 수 있어요.</small><button id="closeVoucher">확인</button></article></div>`);
+    };
+    document.addEventListener('click', event => {
+      if (event.target.closest('#closeVoucher') || event.target.id === 'barcodeVoucher') {
+        document.querySelector('#barcodeVoucher')?.remove();
+      }
+    });
+    document.head.insertAdjacentHTML('beforeend', `<style>.voucher-layer{position:fixed;inset:0;z-index:999;display:grid;place-items:center;padding:20px;background:#001f3288}.voucher-card{width:min(100%,360px);padding:26px 22px;border-radius:24px;text-align:center;background:linear-gradient(160deg,#fff,#e8fbfa);box-shadow:0 20px 45px #001b2e66}.voucher-icon{font-size:42px}.voucher-card h2{margin:10px 0 5px;color:#123b53}.voucher-card p{margin:0 0 16px;color:#147778;font-weight:700}.voucher-card img{display:block;width:100%;height:126px;object-fit:contain;padding:5px;background:#fff;border:1px solid #d6ecea;border-radius:14px}.voucher-card small{display:block;margin:14px 0;color:#68808a;line-height:1.45}.voucher-card button{width:100%;padding:14px;border-radius:13px;background:#087fc7;color:#fff;font-weight:800}</style>`);
+  })();
+</script>
+<script>
+  // 상단 뒤로가기: 현재 모드의 임시 진행 상태를 끝내고 첫 선택 화면으로 돌아갑니다.
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.back')) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.location.reload();
+  }, true);
+</script>
+<script>
+  // 선택한 언어를 모든 화면의 공통 안내 문구에 적용합니다.
+  (() => {
+    const words = {
+      English: {
+        '바다를 되살리는 줍기':'Pick up, restore the sea', '언어와 모드를 선택해 시작하세요.':'Choose a language and mode to start.',
+        '관광객 모드':'Tourist mode', '거주민 모드':'Resident mode', '여행 중 해변 정화에 참여하고 부산 기념품을 모아요.':'Join a beach cleanup and collect Busan souvenirs.',
+        '꾸준한 활동으로 포인트와 지역 보상을 모아요.':'Earn points and local rewards through ongoing action.', '어떻게 참여하나요?':'How does it work?',
+        '주운 쓰레기를 사진으로 찍어요.':'Photograph litter you collected.', 'AI가 종류와 처리 방법을 분석해요.':'AI analyzes the type and disposal method.',
+        '사진 한 장 인증 후 50P와 뽑기권 1장을 받아요.':'Each verified photo earns 50P and one draw ticket.', '보유 포인트':'Points', '뽑기권':'Tickets',
+        'AI 수거 인증 시작하기':'Start AI verification', '거주민 월간 랭킹':'Resident monthly ranking', 'AI 수거 인증':'AI collection verification',
+        '쓰레기 사진 선택하기':'Choose a litter photo', '사진은 AI 분석 데모에만 사용됩니다.':'The photo is used only for the AI demo.',
+        'AI 분석 결과':'AI analysis result', '내용물을 비우고 알맞은 분리배출함에 넣어 주세요.':'Empty it and use the correct recycling bin.',
+        'AI 이미지 분석 데모':'AI image-analysis demo', '50P와 뽑기권 받기':'Claim 50P and a draw ticket', '인증 보상':'Verification reward',
+        '사진 한 장당 보상은 한 번만 받을 수 있어요.':'Each photo can receive its reward once.', '해양 생물 뽑기 하러 가기':'Go to marine draw',
+        '다른 사진 인증하기':'Verify another photo', '나의 수족관':'My aquarium', '포인트':'Points', '아래 해금 생물을 눌러 넣고 빼세요. 생물은 드래그로 옮길 수 있어요.':'Tap unlocked creatures to add or remove them. Drag to move them.',
+        '뽑기로 해금한 생물만 수족관에 넣을 수 있어요.':'Only creatures unlocked by draws can enter the aquarium.', '뽑기 창 열기':'Open draw',
+        '해양 생물 도감':'Marine life encyclopedia', '잠긴 생물은 뽑기로 만날 수 있어요.':'Locked creatures can be found in draws.', '잠긴 생물':'Locked creature',
+        '해양 생물 뽑기':'Marine life draw', '행운의 캡슐':'Lucky capsule', '뽑기권으로 새로운 바다 친구를 만나세요.':'Use a ticket to meet a new ocean friend.',
+        '뽑기권 사용하기':'Use draw ticket', '뽑기권이 필요해요.':'A draw ticket is required.', '스페셜':'Special', '색상 변이':'Color variant',
+        '포인트 상점':'Point shop', '관광객 부산 기념품':'Tourist Busan souvenirs', '거주민 리워드':'Resident rewards', '구매하기':'Buy',
+        '월간 랭킹 보기':'View monthly ranking', '상위 5명 특별 선물 (시연)':'Special prizes for the top 5 (demo)', '기념품 교환 바코드':'Souvenir redemption barcode',
+        '시연용 바코드입니다. 기념품샵에서 스캔하면 교환할 수 있어요.':'Demo barcode. Scan it at the souvenir shop to redeem.', '홈':'Home', '수족관':'Aquarium', '뽑기':'Draw', '도감':'Encyclopedia', '상점':'Shop', '확인':'OK'
+      },
+      中文: {
+        '바다를 되살리는 줍기':'拾起垃圾，复苏海洋', '언어와 모드를 선택해 시작하세요.':'请选择语言和模式后开始。', '관광객 모드':'游客模式', '거주민 모드':'居民模式',
+        '여행 중 해변 정화에 참여하고 부산 기념품을 모아요.':'旅行中参与海滩清洁并收集釜山纪念品。', '꾸준한 활동으로 포인트와 지역 보상을 모아요.':'通过持续活动获得积分和地区奖励。',
+        '어떻게 참여하나요?':'如何参加？', '주운 쓰레기를 사진으로 찍어요.':'拍摄捡到的垃圾。', 'AI가 종류와 처리 방법을 분석해요.':'AI分析种类和处理方法。',
+        '사진 한 장 인증 후 50P와 뽑기권 1장을 받아요.':'每张认证照片可获得50积分和一张抽奖券。', '보유 포인트':'持有积分', '뽑기권':'抽奖券', 'AI 수거 인증 시작하기':'开始AI认证',
+        '거주민 월간 랭킹':'居民月度排名', 'AI 수거 인증':'AI回收认证', '쓰레기 사진 선택하기':'选择垃圾照片', 'AI 분석 결과':'AI分析结果',
+        '50P와 뽑기권 받기':'领取50积分和抽奖券', '인증 보상':'认证奖励', '다른 사진 인증하기':'认证另一张照片', '나의 수족관':'我的水族馆',
+        '뽑기 창 열기':'打开抽奖', '해양 생물 도감':'海洋生物图鉴', '잠긴 생물':'未解锁生物', '해양 생물 뽑기':'海洋生物抽奖',
+        '행운의 캡슐':'幸运胶囊', '뽑기권 사용하기':'使用抽奖券', '뽑기권이 필요해요.':'需要抽奖券。', '포인트 상점':'积分商店', '구매하기':'购买',
+        '관광객 부산 기념품':'游客釜山纪念品', '거주민 리워드':'居民奖励', '월간 랭킹 보기':'查看月度排名', '홈':'主页', '수족관':'水族馆', '뽑기':'抽奖', '도감':'图鉴', '상점':'商店', '확인':'确认'
+      },
+      日本語: {
+        '바다를 되살리는 줍기':'拾って、海をよみがえらせよう', '언어와 모드를 선택해 시작하세요.':'言語とモードを選んで始めましょう。', '관광객 모드':'観光客モード', '거주민 모드':'住民モード',
+        '여행 중 해변 정화에 참여하고 부산 기념품을 모아요.':'旅行中にビーチクリーンへ参加し、釜山のお土産を集めます。', '꾸준한 활동으로 포인트와 지역 보상을 모아요.':'継続的な活動でポイントと地域リワードを集めます。',
+        '어떻게 참여하나요?':'参加方法', '주운 쓰레기를 사진으로 찍어요.':'拾ったごみを撮影します。', 'AI가 종류와 처리 방법을 분석해요.':'AIが種類と処理方法を分析します。',
+        '사진 한 장 인증 후 50P와 뽑기권 1장을 받아요.':'写真1枚の認証で50Pと抽選券1枚を受け取ります。', '보유 포인트':'保有ポイント', '뽑기권':'抽選券', 'AI 수거 인증 시작하기':'AI回収認証を始める',
+        '거주민 월간 랭킹':'住民月間ランキング', 'AI 수거 인증':'AI回収認証', '쓰레기 사진 선택하기':'ごみの写真を選ぶ', 'AI 분석 결과':'AI分析結果',
+        '50P와 뽑기권 받기':'50Pと抽選券を受け取る', '인증 보상':'認証報酬', '다른 사진 인증하기':'別の写真を認証する', '나의 수족관':'私の水族館',
+        '뽑기 창 열기':'ガチャを開く', '해양 생물 도감':'海洋生物図鑑', '잠긴 생물':'ロック中の生物', '해양 생물 뽑기':'海洋生物ガチャ',
+        '행운의 캡슐':'ラッキーカプセル', '뽑기권 사용하기':'抽選券を使う', '뽑기권이 필요해요.':'抽選券が必要です。', '포인트 상점':'ポイントショップ', '구매하기':'購入する',
+        '관광객 부산 기념품':'観光客向け釜山お土産', '거주민 리워드':'住民リワード', '월간 랭킹 보기':'月間ランキングを見る', '홈':'ホーム', '수족관':'水族館', '뽑기':'ガチャ', '도감':'図鑑', '상점':'ショップ', '확인':'確認'
+      }
+    };
+    const applyLanguage = () => {
+      const table = words[window.sseujupLanguage];
+      if (!table) return;
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(node => {
+        let value = node.nodeValue;
+        Object.entries(table).sort((a,b)=>b[0].length-a[0].length).forEach(([ko, translated]) => { value = value.split(ko).join(translated); });
+        if (value !== node.nodeValue) node.nodeValue = value;
+      });
+    };
+    document.addEventListener('click', event => {
+      const button = event.target.closest('[data-language]');
+      if (!button) return;
+      window.sseujupLanguage = button.dataset.language;
+      document.documentElement.lang = window.sseujupLanguage === 'English' ? 'en' : window.sseujupLanguage === '中文' ? 'zh' : window.sseujupLanguage === '日本語' ? 'ja' : 'ko';
+      setTimeout(applyLanguage, 0);
+    }, true);
+    new MutationObserver(applyLanguage).observe(document.body, {childList:true, subtree:true});
+  })();
+</script>
+<script>
+  // 언어를 여러 번 바꿔도 항상 원본 문구에서 다시 번역합니다.
+  (() => {
+    const savedLanguage = decodeURIComponent(location.hash.slice(1));
+    if (savedLanguage) {
+      const restore = () => document.querySelector(`[data-language="${savedLanguage}"]`)?.click();
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', restore, {once:true});
+      else restore();
+    }
+    document.addEventListener('click', event => {
+      const button = event.target.closest('[data-language]');
+      if (!button || !event.isTrusted) return;
+      location.hash = encodeURIComponent(button.dataset.language);
+      location.reload();
+    }, true);
+    document.head.insertAdjacentHTML('beforeend', '<style>.lang button{padding:5px 7px;font-size:12px}</style>');
+  })();
+</script>
+<script>
+  // 카메라 촬영 사진을 기존 사진 인증 흐름으로 전달합니다.
+  (() => {
+    let stream = null;
+    const stopCamera = () => {
+      stream?.getTracks().forEach(track => track.stop());
+      stream = null;
+      document.querySelector('#cameraLayer')?.remove();
+    };
+    const addCameraButton = () => {
+      const input = document.querySelector('#upload');
+      if (!input || document.querySelector('#takeCamera')) return;
+      input.closest('.upload')?.insertAdjacentHTML('beforeend', '<button type="button" id="takeCamera" class="camera-button">📷 카메라로 촬영하기</button><p class="notice">카메라 사용 허용 후 쓰레기 사진을 바로 촬영할 수 있어요.</p>');
+    };
+    new MutationObserver(addCameraButton).observe(document.body, {childList:true, subtree:true});
+    document.addEventListener('click', async event => {
+      if (event.target.closest('#takeCamera')) {
+        try {
+          if (!navigator.mediaDevices?.getUserMedia) throw new Error('unsupported');
+          stream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});
+          document.body.insertAdjacentHTML('beforeend', '<div id="cameraLayer" class="camera-layer"><section class="camera-box"><h2>📷 쓰레기 사진 촬영</h2><video id="cameraVideo" autoplay playsinline></video><p>카메라에 쓰레기가 잘 보이도록 맞춰 주세요.</p><div><button id="capturePhoto" class="camera-capture">● 촬영하기</button><button id="closeCamera" class="camera-close">취소</button></div></section></div>');
+          document.querySelector('#cameraVideo').srcObject = stream;
+        } catch (error) {
+          stopCamera();
+          alert('카메라를 사용할 수 없습니다. 카메라 사용을 허용했는지 확인해 주세요.\nGitHub Pages처럼 HTTPS 환경에서 가장 안정적으로 동작합니다.');
+        }
+      }
+      if (event.target.closest('#closeCamera')) stopCamera();
+      if (event.target.closest('#capturePhoto')) {
+        const video = document.querySelector('#cameraVideo');
+        if (!video?.videoWidth) return;
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0);
+        canvas.toBlob(blob => {
+          const input = document.querySelector('#upload');
+          if (blob && input) {
+            const transfer = new DataTransfer();
+            transfer.items.add(new File([blob], 'camera-trash.jpg', {type:'image/jpeg'}));
+            input.files = transfer.files;
+            input.dispatchEvent(new Event('change', {bubbles:true}));
+          }
+          stopCamera();
+        }, 'image/jpeg', .92);
+      }
+    });
+    document.head.insertAdjacentHTML('beforeend', '<style>.camera-button{display:block;width:100%;margin-top:12px;padding:13px;border-radius:13px;background:#0b8ccd;color:#fff;font-weight:800}.camera-layer{position:fixed;z-index:1000;inset:0;display:grid;place-items:center;padding:18px;background:#001d2dcc}.camera-box{width:min(100%,420px);padding:20px;border-radius:23px;background:#fff;text-align:center}.camera-box h2{margin:0 0 14px;color:#17394d}.camera-box video{width:100%;max-height:52vh;object-fit:cover;background:#132c3b;border-radius:15px}.camera-box p{font-size:13px;color:#587481}.camera-capture,.camera-close{padding:12px 15px;border-radius:12px;font-weight:800}.camera-capture{background:#087fc7;color:#fff}.camera-close{margin-left:8px;background:#e7efef;color:#42616d}</style>');
+    addCameraButton();
+  })();
+</script>
+</body></html>
